@@ -120,10 +120,10 @@
         base {
             display-name = "BASE";
             bindings = <
-                &kp TAB       &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P      &kp BSPC
+                &kp BSPC      &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P      &kp TAB
                 &mt LALT ESC  &kp A  &kp S  &kp D  &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &td_semi   &kp SQT
                 &kp LSHFT     &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp RSHFT
-                                   &kp LGUI  &lt NAV TAB  &kp LCTRL  &kp SPACE  &lt SYM RET  &mt RALT DEL
+                                   &mt LALT CAPS  &lt NAV BSPC  &kp LCTRL  &kp RET  &lt SYM SPACE  &mt RALT DEL
             >;
         };
 
@@ -131,7 +131,7 @@
             display-name = "NAV";
             bindings = <
                 &none       &kp N1          &kp N2        &kp N3        &kp N4        &kp N5            &kp N6        &kp N7      &kp N8          &kp N9        &kp N0     &kp DEL
-                &kp LGUI    &kp HOME        &kp PG_UP     &kp PG_DN     &kp END       &mkp RCLK         &mkp MCLK     &kp LEFT    &kp DOWN        &kp UP        &kp RIGHT  &none
+                &kp LGUI    &kp HOME        &kp PG_UP     &kp PG_DN     &kp END       &mkp RCLK         &mkp MCLK     &kp LEFT    &kp DOWN        &kp UP        &kp RIGHT  &kp RCTRL
                 &trans      &studio_unlock  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3      &bt BT_SEL 4  &bt BT_CLR  &msc SCRL_DOWN  &msc SCRL_UP  &none      &trans
                                             &trans        &trans        &trans                           &trans        &trans      &trans
             >;
