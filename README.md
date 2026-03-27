@@ -22,14 +22,14 @@ o-pnk  pnk   ring   mid    INDEX  reach  reach  INDEX  mid    ring   pnk    o-pn
 BSPC       Q  W  E  R  T        Y  U  I  O  P       TAB
 ESC|META   A  S  D  F  G        H  J  K  L  td(;:)  '
 LSHFT      Z  X  C  V  B        N  M  ,  .  /       RSHFT
-         CAPS|LALT  NAV|BSPC  LCTRL      RET  SYM|SPC  DEL|RALT
+         CAPS|LGUI  NAV|BSPC  LCTRL    RET|RCTRL  SYM|SPC  DEL|RALT
 ```
 
 ### NAV (hold left middle thumb)
 
 ```
 ___    1     2     3     4     5        6     7     8     9     0    DEL
-LGUI  HOME  PGUP  PGDN  END  RCLK    MCLK  LEFT  DOWN   UP  RIGHT RCTRL
+LGUI  HOME  PGUP  PGDN  END  RCLK    MCLK  LEFT  DOWN   UP  RIGHT LGUI
 ___   STUDIO BT0   BT1   BT2   BT3     BT4 BTCLR SCR_D SCR_U ___   ___
            ___   [NAV]   ___            ___  >>>   ___
 ```
@@ -39,7 +39,7 @@ ___   STUDIO BT0   BT1   BT2   BT3     BT4 BTCLR SCR_D SCR_U ___   ___
 ```
  ~    @    #    *    &    !        ?    _    +    $    %    `
  |    [    <    {    (    -        =    )    }    >    ]    \
-___   //   &&   ->   ::   <<       >>   ==   <=   !=   >=  ___
+___   //   &&   ->   ::   <<       >>   ==   <=   !=   >=   \n
            ___  >>>  ___              ___  [SYM]  ___
 ```
 
@@ -58,10 +58,10 @@ ___  ___  ___  ___  ___  ___      ___ PREV PLAY NEXT MUTE  ___
 
 | Position | Key | Rationale |
 |----------|-----|-----------|
-| L outer | CAPS/LALT | tap = Caps Lock, hold = Left Alt — Meta for Emacs (M-x, M-f, M-b) without pinky mod-tap timing |
+| L outer | CAPS/LGUI | tap = Caps Lock, hold = Super — i3 `$mod` for base-layer shortcuts ($mod+RET, $mod+r, $mod+d) |
 | L middle | NAV/BSPC | tap = Backspace (thumb = less pinky fatigue), hold = NAV layer |
 | L inner | LCTRL | Dedicated Ctrl — zero latency for rapid Emacs sequences (C-x C-s, C-x C-f) |
-| R inner | RET | Dedicated Enter — no hold delay for terminal/chat workflows |
+| R inner | RET/RCTRL | tap = Enter (quick-tap enabled for rapid-fire), hold = Right Ctrl for one-handed Ctrl+arrow, Ctrl+C/D/Z |
 | R middle | SYM/SPC | tap = Space, hold = SYM layer |
 | R outer | DEL/RALT | tap = Delete, hold = Right Alt (AltGr for Spanish: ñ, á, é, ó, ú, ¿, ¡) |
 
@@ -69,7 +69,7 @@ ___  ___  ___  ___  ___  ___      ___ PREV PLAY NEXT MUTE  ___
 
 - tap = Escape (Emacs C-g alternative, mode exits)
 - hold = Left Alt / Meta (M-x, M-f, M-b, M-d, M-w)
-- Ctrl (more frequent in Emacs) gets the dedicated thumb position; Meta is available on both the pinky mod-tap and the L outer thumb hold
+- Ctrl (more frequent in Emacs) gets the dedicated thumb position; Meta lives solely on the pinky mod-tap
 
 ### SYM layer: C++ optimized
 
@@ -93,8 +93,8 @@ ___  ___  ___  ___  ___  ___      ___ PREV PLAY NEXT MUTE  ___
 
 | Left | | | | | | Right | | | | |
 |------|------|------|------|------|------|------|------|------|------|------|
-| `//` | `&&` | `->` | `::` | `<<` | | `>>` | `==` | `<=` | `!=` | `>=` |
-| pnk | rng | mid | INDEX | reach | | reach | INDEX | mid | rng | pnk |
+| `//` | `&&` | `->` | `::` | `<<` | | `>>` | `==` | `<=` | `!=` | `>=` | `\n` |
+| pnk | rng | mid | INDEX | reach | | reach | INDEX | mid | rng | pnk | o-pnk |
 
 `::` (scope resolution) and `==` (equality) are on index home — the two most frequently typed combos in C++.
 
@@ -109,7 +109,7 @@ Arrows match i3 default `$mod+j/k/l/;` directions, so the same physical key move
 | L (R ring) | `$mod+l` = focus up | UP |
 | ; (R pinky) | `$mod+;` = focus right | RIGHT |
 
-i3 workspace switching: hold NAV (L middle thumb) + hold LGUI (NAV left pinky home), then type 1-9 with either hand. For `$mod+Shift+number` (move window to workspace), use RSHFT (right pinky) since LGUI and LSHFT share the left pinky column in NAV.
+i3 workspace switching: hold NAV (L middle thumb) + hold LGUI (NAV left pinky home or right outer pinky home), then type 1-9 with either hand. The mirrored LGUI on right outer pinky enables right-hand-only `$mod+number` combos (hold LGUI with right pinky, tap 6-0 with right hand). For `$mod+Shift+number` (move window to workspace), use RSHFT (right pinky) since LGUI and LSHFT share the left pinky column in NAV.
 
 ### Mouse controls (NAV layer)
 
@@ -118,7 +118,7 @@ The Toucan's Cirque Pinnacle touchpad automatically converts to scroll in NAV/SY
 - RCLK on left index reach (G position) — right-click with left hand while right hand uses touchpad
 - MCLK on right index reach (H position) — middle click
 - SCRL_DOWN / SCRL_UP below the DOWN/UP arrow keys — discrete scroll steps
-- RCTRL on right outer pinky home row — right-hand Ctrl for Ctrl+arrow navigation combos while in NAV
+- LGUI on right outer pinky home row — mirrors left-hand LGUI for right-hand i3 `$mod+number` workspace switching
 
 ### ADJ layer: Spanish characters
 
@@ -128,7 +128,7 @@ The Toucan's Cirque Pinnacle touchpad automatically converts to scroll in NAV/SY
 
 All mod-taps and layer-taps use **balanced** flavor (200ms tapping term). This means the hold triggers when another key is pressed AND released during the hold, preventing accidental modifier activation during fast typing.
 
-Layer-taps have **quick-tap** (150ms) so double-tapping Backspace or Space sends the key twice without activating the layer.
+Both mod-taps and layer-taps have **quick-tap** (150ms) so double-tapping Backspace, Space, Enter, or Delete sends the key twice without activating the hold behavior.
 
 ### Tap-dance
 
