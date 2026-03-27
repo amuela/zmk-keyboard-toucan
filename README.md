@@ -113,7 +113,7 @@ i3 workspace switching: hold NAV (L middle thumb) + hold LGUI (NAV left pinky ho
 
 ### Mouse controls (NAV layer)
 
-The Toucan's Cirque Pinnacle touchpad automatically converts to scroll in NAV/SYM layers (configured in the device tree). Additionally:
+The Toucan's Cirque Pinnacle touchpad automatically converts to scroll in NAV/SYM layers (configured in the device tree). Natural scrolling is enabled (finger direction = scroll direction): Y-axis inverted, X-axis default (no invert) in the scroll processor. Additionally:
 
 - RCLK on left index reach (G position) — right-click with left hand while right hand uses touchpad
 - MCLK on right index reach (H position) — middle click
