@@ -19,7 +19,7 @@ o-pnk  pnk   ring   mid    INDEX  reach  reach  INDEX  mid    ring   pnk    o-pn
 ### BASE
 
 ```
-BSPC       Q  W  E  R  T        Y  U  I  O  P       TAB
+`/~        Q  W  E  R  T        Y  U  I  O  P       TAB
 ESC|META   A  S  D  F  G        H  J  K  L  td(;:)  '
 LSHFT      Z  X  C  V  B        N  M  ,  .  /       RSHFT
          CAPS|LGUI  NAV|BSPC  LCTRL    RET|RCTRL  SYM|SPC  DEL|RALT
@@ -28,7 +28,7 @@ LSHFT      Z  X  C  V  B        N  M  ,  .  /       RSHFT
 ### NAV (hold left middle thumb)
 
 ```
-___    1     2     3     4     5        6     7     8     9     0    DEL
+ ¡     1     2     3     4     5        6     7     8     9     0    DEL
 LGUI  HOME  PGUP  PGDN  END  RCLK    MCLK  LEFT  DOWN   UP  RIGHT LGUI
 ___   STUDIO BT0   BT1   BT2   BT3     BT4 BTCLR SCR_D SCR_U ___   ___
            ___   [NAV]   ___            ___  >>>   ___
@@ -37,7 +37,7 @@ ___   STUDIO BT0   BT1   BT2   BT3     BT4 BTCLR SCR_D SCR_U ___   ___
 ### SYM (hold right middle thumb)
 
 ```
- ~    @    #    *    &    !        ?    _    +    $    %    `
+ ¿    @    #    *    &    !        ?    _    +    $    %    `
  |    [    <    {    (    -        =    )    }    >    ]    \
 ___   //   &&   ->   ::   <<       >>   ==   <=   !=   >=   \n
            ___  >>>  ___              ___  [SYM]  ___
@@ -122,7 +122,7 @@ The Toucan's Cirque Pinnacle touchpad automatically converts to scroll in NAV/SY
 
 ### ADJ layer: Spanish characters
 
-`¡` and `¿` are implemented as macros that send AltGr + key internally, so they work from the ADJ layer without needing to physically hold RALT. `^` (XOR) is also here, displaced from SYM by the more useful backtick.
+`¡` and `¿` are available on NAV and SYM layers respectively (top-left corner) for quick access, and also on ADJ layer. They are implemented as macros that send AltGr + key internally. `^` (XOR) is on ADJ, displaced from SYM by the more useful backtick.
 
 ### Tap-hold behavior
 
