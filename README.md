@@ -28,7 +28,7 @@ LSHFT      Z  X  C  V  B        N  M  ,  .  /       RSHFT
 ### NAV (hold left middle thumb)
 
 ```
- ¡     1     2     3     4     5        6     7     8     9     0    DEL
+ ¡     1     2     3     4     5        6     7     8     9     0   BSPC
 LGUI  HOME  PGUP  PGDN  END  RCLK    MCLK  LEFT  DOWN   UP  RIGHT LGUI
 ___   STUDIO BT0   BT1   BT2   BT3     BT4 BTCLR SCR_D SCR_U ___   ___
            ___   [NAV]   ___            ___  >>>   ___
