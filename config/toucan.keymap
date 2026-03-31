@@ -21,6 +21,7 @@
     flavor = "balanced";
     tapping-term-ms = <200>;
     quick-tap-ms = <150>;
+    require-prior-idle-ms = <125>;
 };
 
 / {
@@ -88,7 +89,7 @@
         m_iexcl: m_iexcl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_tap &kp N1>, <&macro_release &kp RALT>;
+            bindings = <&macro_press &kp RALT &kp LSHFT>, <&macro_tap &kp N1>, <&macro_release &kp LSHFT &kp RALT>;
         };
 
         m_iqmark: m_iqmark {
@@ -128,7 +129,7 @@
             display-name = "BASE";
             bindings = <
                 &kp GRAVE     &kp Q  &kp W  &kp E  &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P      &kp TAB
-                &mt LALT ESC  &kp A  &kp S  &kp D  &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &td_semi   &kp SQT
+                &mt LALT ESC  &kp A  &kp S  &kp D  &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &kp SEMI   &mt LALT SQT
                 &kp LSHFT     &kp Z  &kp X  &kp C  &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH   &kp RSHFT
                                    &mt LGUI CAPS  &lt NAV BSPC  &kp LCTRL  &mt RCTRL RET  &lt SYM SPACE  &mt RALT DEL
             >;
@@ -147,7 +148,7 @@
         sym {
             display-name = "SYM";
             bindings = <
-                &m_iqmark  &kp AT    &kp HASH  &kp ASTRK  &kp AMPS   &kp EXCL      &kp QMARK  &kp UNDER  &kp PLUS   &kp DLLR  &kp PRCNT  &kp GRAVE
+                &m_iqmark  &kp AT    &kp HASH  &kp ASTRK  &kp AMPS   &kp EXCL      &kp QMARK  &kp UNDER  &kp PLUS   &kp DLLR  &kp PRCNT  &kp CARET
                 &kp PIPE   &kp LBKT  &kp LT    &kp LBRC   &kp LPAR   &kp MINUS     &kp EQUAL  &kp RPAR   &kp RBRC   &kp GT    &kp RBKT   &kp BSLH
                 &trans     &m_dslash &m_damp   &m_arrow   &m_scope   &m_dlt        &m_dgt     &m_deq     &m_lteq    &m_neq    &m_gteq    &m_newl
                                      &trans    &trans     &trans                    &trans     &trans     &trans

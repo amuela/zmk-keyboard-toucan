@@ -2,7 +2,7 @@
 
 [The beekeeb Toucan Keyboard](https://beekeeb.com/toucan-keyboard/) is a wireless split 42-key column-stagger keyboard with a display and a trackpad, with an aggressive stagger on the pinky columns.
 
-This configuration is optimized for **Emacs + i3wm + modern C++** on a US International (dead keys) layout.
+This configuration is optimized for **Emacs + i3wm + modern C++** on a US International AltGr (no dead keys) layout.
 
 ## Layout
 
@@ -20,7 +20,7 @@ o-pnk  pnk   ring   mid    INDEX  reach  reach  INDEX  mid    ring   pnk    o-pn
 
 ```
 `/~        Q  W  E  R  T        Y  U  I  O  P       TAB
-ESC|META   A  S  D  F  G        H  J  K  L  td(;:)  '
+ESC|META   A  S  D  F  G        H  J  K  L  ;       '|META
 LSHFT      Z  X  C  V  B        N  M  ,  .  /       RSHFT
          CAPS|LGUI  NAV|BSPC  LCTRL    RET|RCTRL  SYM|SPC  DEL|RALT
 ```
@@ -37,7 +37,7 @@ ___   STUDIO BT0   BT1   BT2   BT3     BT4 BTCLR SCR_D SCR_U ___   ___
 ### SYM (hold right middle thumb)
 
 ```
- ¿    @    #    *    &    !        ?    _    +    $    %    `
+ ¿    @    #    *    &    !        ?    _    +    $    %    ^
  |    [    <    {    (    -        =    )    }    >    ]    \
 ___   //   &&   ->   ::   <<       >>   ==   <=   !=   >=   \n
            ___  >>>  ___              ___  [SYM]  ___
@@ -68,8 +68,8 @@ ___  ___  ___  ___  ___  ___      ___ PREV PLAY NEXT MUTE  ___
 ### Left pinky home row: ESC|META (mod-tap)
 
 - tap = Escape (Emacs C-g alternative, mode exits)
-- hold = Left Alt / Meta (M-x, M-f, M-b, M-d, M-w)
-- Ctrl (more frequent in Emacs) gets the dedicated thumb position; Meta lives solely on the pinky mod-tap
+- hold = Meta (M-x, M-f, M-b, M-d, M-w)
+- Ctrl (more frequent in Emacs) gets the dedicated thumb position; Meta is available on both left pinky home and right pinky home (hold = Meta, tap = ')
 
 ### SYM layer: C++ optimized
 
@@ -122,7 +122,7 @@ The Toucan's Cirque Pinnacle touchpad automatically converts to scroll in NAV/SY
 
 ### ADJ layer: Spanish characters
 
-`¡` and `¿` are available on NAV and SYM layers respectively (top-left corner) for quick access, and also on ADJ layer. They are implemented as macros that send AltGr + key internally. `^` (XOR) is on ADJ, displaced from SYM by the more useful backtick.
+`¡` and `¿` are available on NAV and SYM layers respectively (top-left corner) for quick access, and also on ADJ layer. They are implemented as macros that send AltGr+Shift + key internally (required by US altgr-intl layout). `^` (caret/XOR) is on both SYM (top-right corner) and ADJ.
 
 ### Tap-hold behavior
 
@@ -130,9 +130,9 @@ All mod-taps and layer-taps use **balanced** flavor (200ms tapping term). This m
 
 Both mod-taps and layer-taps have **quick-tap** (150ms) so double-tapping Backspace, Space, Enter, or Delete sends the key twice without activating the hold behavior.
 
-### Tap-dance
+### Tap-hold timing
 
-Semicolon position (`;`): single tap = `;`, double tap = `:` (250ms window). Saves reaching for Shift when typing colons in C++ (ternary, range-for, labels).
+Layer-taps use `require-prior-idle-ms` (125ms) to prevent accidental layer activation during fast typing — if you've been typing within 125ms, the keypress is always treated as a tap (Space/Backspace), not a hold (SYM/NAV).
 
 ## Building
 
