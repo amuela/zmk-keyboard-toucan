@@ -117,15 +117,6 @@
         };
     };
 
-    behaviors {
-        td_semi: td_semi {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <250>;
-            bindings = <&kp SEMI>, <&kp COLON>;
-        };
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
