@@ -47,8 +47,8 @@ ___   //   &&   ->   ::   <<       >>   ==   <=   !=   >=   \n
 
 ```
  F1   F2   F3   F4   F5   F6      F7   F8   F9   F10  F11  F12
-___  ___  ___  ___   ¡   ___      ___   ¿  VOL_D VOL_U ___   ^
-___  ___  ___  ___  ___  ___      ___ PREV PLAY NEXT MUTE  ___
+___  ___  ___  ___   ¡   M-?      ___   ¿  VOL_D VOL_U M-S-→ ___
+LALT ___  ___  ___  ___  ___      ___ PREV PLAY NEXT MUTE LCTRL
            ___  [NAV] ___            ___ [SYM] ___
 ```
 
@@ -120,9 +120,13 @@ The Toucan's Cirque Pinnacle touchpad automatically converts to scroll in NAV/SY
 - SCRL_DOWN / SCRL_UP below the DOWN/UP arrow keys — discrete scroll steps
 - LGUI on right outer pinky home row — mirrors left-hand LGUI for right-hand i3 `$mod+number` workspace switching
 
-### ADJ layer: Spanish characters
+### ADJ layer: Spanish characters and Emacs workarounds
 
-`¡` and `¿` are available on NAV and SYM layers respectively (top-left corner) for quick access, and also on ADJ layer. They are implemented as macros that send AltGr+Shift + key internally (required by US altgr-intl layout). `^` (caret/XOR) is on both SYM (top-right corner) and ADJ.
+`¡` and `¿` are available on NAV and SYM layers respectively (top-left corner) for quick access, and also on ADJ layer. They are implemented as macros that send AltGr+Shift + key internally (required by US altgr-intl layout). `^` (caret/XOR) is on SYM (top-right corner) only.
+
+LALT and LCTRL on the bottom-row outer positions enable modified F-key combos (`M-F*`, `C-F*`) that would otherwise require pressing two adjacent thumb keys simultaneously.
+
+`M-?` (G position) and `M-S-RIGHT` (; position) are ZMK macros that send the full modifier+key sequence. These Emacs chords are physically impossible as direct keypresses because Meta, Shift, and the target key all land on pinky columns (three-way same-finger collision).
 
 ### Tap-hold behavior
 

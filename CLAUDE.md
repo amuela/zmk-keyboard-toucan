@@ -37,7 +37,7 @@ No test or lint tooling exists in this repo.
 Custom nice!view display shield with C widget code compiled via CMake. Widgets in `widgets/` render battery (central + peripheral), layer name, BLE profile, output type, and a sleep indicator. Font assets live in `assets/`.
 
 ### Keymap (`config/toucan.keymap`)
-4 active layers: BASE (QWERTY), NAV (navigation + BT), SYM (symbols), ADJ (F-keys + media). Tri-layer combo: NAV + SYM activates ADJ. Layout JSON for the keymap editor is in `config/toucan.json`.
+4 active layers: BASE (QWERTY), NAV (navigation + BT), SYM (symbols), ADJ (F-keys + media + Emacs workarounds). Tri-layer combo: NAV + SYM activates ADJ. ADJ provides LALT/LCTRL on outer pinky bottom row for modified F-key combos, plus macros for `M-?` (G position) and `M-S-RIGHT` (; position) — Emacs chords impossible as direct keypresses due to pinky-column collisions. Layout JSON for the keymap editor is in `config/toucan.json`.
 
 ### Power management
 - Deep sleep after 60 min idle (`CONFIG_ZMK_SLEEP`)
