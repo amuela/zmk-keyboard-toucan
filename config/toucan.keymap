@@ -117,6 +117,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_lclk {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&mkp LCLK>;
+            layers = <BASE>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
