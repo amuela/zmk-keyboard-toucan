@@ -47,8 +47,8 @@ ___   //   &&   ->   ::   <<       >>   ==   <=   !=   >=   \n
 
 ```
  F1   F2   F3   F4   F5   F6      F7   F8   F9   F10  F11  F12
-___  ___  ___  ___   ¡   M-?      ___   ¿  VOL_D VOL_U M-S-→ ___
-LALT ___  ___  ___  ___  ___      ___ PREV PLAY NEXT MUTE LCTRL
+LALT ___  ___  ___   ¡   M-?      ___   ¿  VOL_D VOL_U M-S-→ LCTRL
+LSHFT ___  ___  ___  ___  ___     ___ PREV PLAY NEXT MUTE RSHFT
            ___  [NAV] ___            ___ [SYM] ___
 ```
 
@@ -125,7 +125,7 @@ The Toucan's Cirque Pinnacle touchpad automatically converts to scroll in NAV/SY
 
 `¡` and `¿` are available on NAV and SYM layers respectively (top-left corner) for quick access, and also on ADJ layer. They are implemented as macros that send AltGr+Shift + key internally (required by US altgr-intl layout). `^` (caret/XOR) is on SYM (top-right corner) only.
 
-LALT and LCTRL on the bottom-row outer positions enable modified F-key combos (`M-F*`, `C-F*`) that would otherwise require pressing two adjacent thumb keys simultaneously.
+LALT and LCTRL on the home-row outer positions enable modified F-key combos (`M-F*`, `C-F*`) that would otherwise require pressing two adjacent thumb keys simultaneously. LSHFT and RSHFT on the bottom-row outer positions mirror BASE layer, enabling shifted combos (`S-F*`, `C-S-F*`) in ADJ.
 
 `M-?` (G position) and `M-S-RIGHT` (; position) are ZMK macros that send the full modifier+key sequence. These Emacs chords are physically impossible as direct keypresses because Meta, Shift, and the target key all land on pinky columns (three-way same-finger collision).
 
